@@ -30,6 +30,22 @@
   a { text-decoration: none; color: inherit; }
   .wrap { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
 
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   /* NAV */
   header {
     position: sticky;
